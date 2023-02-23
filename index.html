@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cabernet Sauvignon</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: #45171d;
+        line-height: 30px;
+        padding: 5px 10px;
+      }
+      h2 {
+        text-align: center;
+        color: #45171d;
+        border: 1px solid #45171d;
+        border-radius: 4px;
+        margin: 15px 10px;
+        padding: 5px;
+      }
+      p {
+        text-align: center;
+        font-size: 16px;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 5px;
+        border: 1px solid #45171d;
+        background-color: #45171d;
+        color: white;
+        border: 1px solid #45171d;
+        border-radius: 30px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        color: #45171d;
+        background-color: transparent;
+        cursor: pointer;
+      }
+      a {
+        font-size: 14px;
+        text-decoration: none;
+        display: block;
+        margin: 10px 5px;
+        padding: 15px 10px;
+        width: 100px;
+      }
+      a:hover {
+        color: #45171d;
+      }
+      .conteiner {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 35px 50px;
+
+        background: linear-gradient(
+          87.4deg,
+          rgb(255, 241, 165) 1.9%,
+          rgb(200, 125, 76) 49.7%,
+          rgb(83, 54, 54) 100.5%
+        );
+        font-family: Helvetica, Arial, sans-serif;
+      }
+      .wine-sort {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="conteiner">
+      <h1>Cabernet Sauvignon</h1>
+      <h2>Red Wine</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/063/084/original/red_wine.jpeg?1673858679"
+        alt="Glass of red wine"
+        width="200px"
+      />
+
+      <p>
+        The classic profile of <span class="wine-sort">Cabernet Sauvignon</span>
+        tends to be full-bodied wines with high tannins and noticeable acidity
+        that contributes to the wine's aging potential. In cooler climates,
+        Cabernet Sauvignon produces wines with blackcurrant notes that can be
+        accompanied by green bell pepper notes, mint and cedar, which will all
+        become more pronounced as the wine ages. In more moderate climates, the
+        black currant notes are often seen with black cherry and black olive
+        notes, while in very hot climates, the currant flavours can veer towards
+        the over-ripe and "jammy" side.
+      </p>
+      <hr />
+      <a
+        href="https://en.wikipedia.org/wiki/Cabernet_Sauvignon"
+        target="_blank"
+      >
+        <em>Find out more</em></a
+      >
+      <br />
+
+      <button><strong>🍷Order Your Cabernet</strong></button>
+    </div>
+    <script>
+      function wineOrder() {
+        let name = prompt("What is your name?");
+        let age = prompt("How old are you?");
+        let email = prompt("What is your email adrress?");
+        if (age >= 18) {
+          alert(
+            "Hi, " +
+              name +
+              "! We will contact you on your email: " +
+              email +
+              "."
+          );
+        } else {
+          alert(
+            "Sorry, " +
+              name +
+              ". You can not order wine since you are underage."
+          );
+        }
+      }
+
+      let orderButton = document.querySelector("button");
+      orderButton.addEventListener("click", wineOrder);
+    </script>
+  </body>
+</html>
